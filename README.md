@@ -1,2 +1,2 @@
-# CZRecord
-我每天都在github上做些什么
+
+# 我每天都在github上做些什么
