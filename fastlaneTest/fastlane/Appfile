@@ -1,0 +1,8 @@
+app_identifier("com.cz.wnkp.fastlaneTest") # The bundle identifier of your app
+apple_id("hans3d@163.com") # Your Apple email address
+
+itc_team_id("118370866") # App Store Connect Team ID
+team_id("9A77SSRXJG") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

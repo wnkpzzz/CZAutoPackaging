@@ -1,0 +1,44 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+
+
+default_platform(:ios)
+
+platform :ios do
+
+    desc "fastlane 打包上传到蒲公英发布网站"
+    lane :fsv_pgyer do
+
+    gym(
+        clean:true,                      # Clean项目
+        scheme:"fastlaneTest",           # 项目名称
+        export_method:"ad-hoc",          # 打包的类型
+        configuration:"Release",         # 模式，默认Release，还有Debug
+        output_directory:"./build",      # 输出的位置
+    )
+
+    time      = Time.new.strftime("%Y%m%d")
+    version   = get_version_number
+    api_key   = "06e5563d5a8b94aac1c297426d351df6"
+    user_key  = "974d1feb99ad49c955ed82a16ae2c21a"
+    usipaName = "Release_#{version}_#{time}.ipa"
+
+    pgyer(api_key: "#{api_key}", user_key: "#{user_key}")
+
+
+end
+end
+
