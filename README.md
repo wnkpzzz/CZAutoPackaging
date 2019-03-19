@@ -1,5 +1,10 @@
+![](https://upload-images.jianshu.io/upload_images/6545546-d47d3abfd63cb1d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 #前言
->项目上线之际总需要打包测试，每次使用`Xcode - Archive `等待好几分钟的Buliding，然后Export，通过`Application Loader`上传到AppStore，或者分发到`蒲公英，Fir`等发布平台。所以自动化打包ipa，很有必要掌握。
+>项目上线之际总需要打包测试，每次使用`Xcode - Archive `等待好几分钟的Buliding，然后Export，通过`Application Loader`上传到AppStore，或者分发到`蒲公英，Fir`等发布平台。一系列操作是耗时且没有技术含量的工作，所以自动化打包ipa，很有必要掌握。[点击前往Github下载Demo](https://github.com/wnkpzzz/CZAutoPackaging)
+ 
+
+
 
 
 
