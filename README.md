@@ -1,7 +1,7 @@
 ![](https://upload-images.jianshu.io/upload_images/6545546-d47d3abfd63cb1d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #前言
->项目上线之际总需要打包测试，每次使用`Xcode - Archive `等待好几分钟的Buliding，然后Export，通过`Application Loader`上传到AppStore，或者分发到`蒲公英，Fir`等发布平台。一系列操作是耗时且没有技术含量的工作，所以自动化打包ipa，很有必要掌握。[点击前往Github下载Demo](https://github.com/wnkpzzz/CZAutoPackaging)
+>项目上线之际总需要打包测试，每次使用`Xcode - Archive `等待好几分钟的Buliding，然后Export，通过`Application Loader`上传到 `AppStore `，或者分发到`蒲公英，Fir`等发布平台。一系列操作是耗时且没有技术含量的工作，所以自动化打包ipa，很有必要掌握。[点击前往Github下载Demo](https://github.com/wnkpzzz/CZAutoPackaging)
  
 
 
@@ -9,16 +9,16 @@
 
 
 #工具
->脚本工具有很多，这里使用的是FastLane，[Github](https://github.com/fastlane/fastlane)里面24+K的Star和3.7K的Fork，大量的开发者信任并一起维护。
+>脚本工具有很多，这里使用的是 `FastLane `，[Github](https://github.com/fastlane/fastlane)里面24+K的Star和3.7K的Fork，说明大量的开发者信任并一起维护使用。
 
 #安装
-使用FastLane需要一下内容：
+使用 `FastLane `需要以下内容：
 >* `OS X10.9`及以上版本
 >* ` Ruby2.0`及以上版本
 >* Xcode命令行工具`（CLT）`
 >* 付费Apple开发者帐户
 
-`FastLane`是`Ruby`脚本的即合，首先需要正确版本的`Ruby`,从`OS X10.9`及以后默认`Ruby2.0`。
+`FastLane`是`Ruby`脚本的集合，首先需要正确版本的`Ruby`,从`OS X10.9`及以后默认`Ruby2.0`。
 我们可以通过命令确认，打开终端输入如下命令：
 ```
 ruby -v
@@ -37,7 +37,7 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 sudo gem install -n /usr/local/bin fastlane --verbose
 ```
 正常情况，输入系统密码之后，终端窗口会有一系列活动，表明安装正在进行中，需要等待几分钟。
-`备注：这里如果报错，参考文章最下面踩坑一`
+`备注：这里如果报错，参考文章最下面 踩坑一`
 
 #配置FastLane
 ###1、fastlane init
@@ -83,7 +83,7 @@ fastlane init
 [11:10:07]: Please enter your Apple ID developer credentials
 [11:10:07]: Apple ID Username:
 ```
-输入我们的账号和密码，因为2019.03苹果开启二级认证，需要手机登录开发者账号，进行允许权限。
+输入`Apple Developer`的账号和密码，因为2019.03苹果开启二级认证，需要手机登录开发者账号，进行允许权限。
 登陆成功如下：
 ```
 [11:41:06]: ✅  Logging in with your Apple ID was successful
@@ -112,9 +112,7 @@ fastlane init
 ```
 [11:43:46]: App Name: fastlane_wnkp_demo
 ```
-然后根据操作点击回车即可、
-
-安装完fastlane并调用`fastlane init`后，目录结构大概如下所示：
+然后根据操作点击回车即可！此时目录结构大概如下所示：
 
 ![](https://upload-images.jianshu.io/upload_images/6545546-55237d830ff45dfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
